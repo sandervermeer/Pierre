@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+}
+
+.parent {
+    height:100vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+    "header"
+    "menu"
+    "main"
+    "widget"
+    "footer";
+}
+
+
+h2{
+    color:black;
+    font-weight:700;
+    text-align:left;
+    font-size:2.5em;
+}
+
+header{ 
+background-image: url(images/pierre-red.png);
+background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    position:relative;
+    padding:120px;
+    grid-area: header;
+
+}
+
+
+
+.TitelPB{
+
+    color:black;
+    font-family: 'Charis SIL', serif;
+    font-size: 2em;
+    text-align:center;
+    margin-top:-50px;
+    margin-bottom:-40px;
+    margin-left: -40px;
+    
+}
+
+button{
+    margin-top: 15px;
+    font-size:1.2em;
+    font-family: 'Charis SIL', serif;
+    font-style:italic;
+    background-color:white;
+    margin-left:-25px;
+    transition-duration: 0.4s;
+    width:100%;
+    margin-bottom:20px;
+    text-decoration: none;
+}
+
+
+button:hover{
+        font-style:bold italic;
+        color:#ffff;
+        background-color:#d62a2a;
+        border: 3px solid #ffff;
+       
+    
+}
+
+
+main{
+
+    background-color:rgb(249, 236, 216);
+    grid-area:main;
+    padding-left:20%;
+    padding-right:20%;
+    padding-top:4%;
+    padding-bottom:5%;
+    font-family: 'Charis SIL', serif;
+    
+}
+
+.responsive_img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+main h3{
+
+    font-size: 1.4em;
+}
+
+menu{
+    grid-area:menu;
+}
+
+widget{
+    background-color:red;
+    grid-area: widget;
+}
+
+footer{
+    padding:50px;
+    text-align:center;
+    background-color:green;
+    grid-area:footer;
+    font-family: 'Charis SIL', serif;
+}
+
+
+
+a{ 
+    font-size:0.8em;
+    text-decoration:none;
+}
+
+a:visited{
+    font-family: 'Charis SIL', serif;
+    color:black;
+}
+
+a:hover{
+    color:red;
+    font-weight:bold;
+    font-size:1.1em;
+    
+}
+
+form{ 
+    padding:20px;
+    margin:10px;
+    font-family: 'Charis SIL', serif;
+
+
+}
+
+.container > h4{
+    color:white;
+    text-align: center;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    font-family: 'Charis SIL', serif;
+    letter-spacing:1px;
+   
+  }
+  
+  input[type=checkbox] {
+    margin-top: 16px;
+  }
+  
+  input[type=submit] {
+    background-color: green;
+    color: white;
+    border: none;
+  }
+  
+  input[type=submit]:hover {
+    background-color: lightgreen;
+    color:red;
+
+}
+
+.flex-container{
+
+    display:flex;
+    flex-direction: column;
+    
+    
+}
+
+iframe{
+display:block;
+text-align: center;
+width:100%;
+}
+
+@media (min-width: 768px) {
+   
+   
+    .parent {
+        height:100vh;
+        display: grid;
+        grid-template-columns: 400px 1fr 1fr ;
+        grid-template-rows: 1fr 1r 1fr 1fr;
+        grid-template-areas: 
+        "menu header header"
+        " widget main main"
+        "widget main main"
+        "footer  footer footer";
+    }
+
+    button{
+
+        font-size:2em;
+        font-family: 'Charis SIL', serif;
+        align-items:row;
+        display:block;
+        margin-top:20%;
+        text-align:center;
+        padding: 17px;
+
+}
+
+.TitelPB{
+
+   
+    font-size: 2.2em;
+}
+
+
+footer{
+
+padding:75px;
+
+ }
+}
+@media (min-width: 1900px) {
+  
+    .parent {
+        height:100vh;
+        display: grid;
+        grid-template-columns: 500px 1fr 1fr ;
+        grid-template-rows: 1fr 1r 1fr;
+        grid-template-areas: 
+        "menu header header"
+        "widget main main"
+        "widget main main"
+        "widget  footer footer";
+    }
+
+
+    button{
+        padding: 20px;
+        font-size:3em;
+        font-family: 'Charis SIL', serif;
+        align-items:row;
+        display:block;
+        margin-top:20%;
+        text-align:center;
+    
+
+    }
+
+
+    button:hover{
+
+    background-color:#d62a2a;
+    border: 3px solid #0000;
+    
+   
+}
+
+
+.TitelPB{
+
+   
+    font-size: 2em;
+    
+}
+
+header{ 
+   
+        padding:150px;
+       
+
+
+}
+
+footer{
+text-align:center;
+padding:75px;
+padding:100px;
+ }
+
+}
